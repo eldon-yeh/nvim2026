@@ -26,6 +26,7 @@ require 'kickstart.plugins.treesitter'
 -- require 'kickstart.plugins.lint'
 -- require 'kickstart.plugins.autopairs'
 require 'kickstart.plugins.neo-tree'
+require 'custom.plugins.git'
 
 -- NOTE: You can add your own plugins, configuration, etc. in `lua/custom/plugins/*.lua`.
 --

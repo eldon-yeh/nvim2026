@@ -114,6 +114,10 @@ local servers = {
   -- But for many setups, the LSP (`rust_analyzer`) will work just fine
   -- rust_analyzer = {},
 
+  ts_ls = {}, -- TypeScript / JavaScript / React (.ts, .tsx, .js, .jsx)
+  eslint = {}, -- ESLint diagnostics
+  omnisharp = {}, -- C# / .NET
+
   stylua = {}, -- Used to format Lua code
 
   -- Special Lua Config, as recommended by neovim help docs

@@ -29,6 +29,7 @@ require 'kickstart.plugins.neo-tree'
 require 'custom.plugins.git'
 require 'custom.plugins.git-conflict'
 require 'custom.plugins.harpoon'
+require 'custom.plugins.markdown'
 
 -- NOTE: You can add your own plugins, configuration, etc. in `lua/custom/plugins/*.lua`.
 --

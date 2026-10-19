@@ -12,6 +12,13 @@ vim.keymap.set('i', 'jk', '<Esc>', { desc = 'Exit insert mode' })
 -- p pastes, gv reselects the pasted text, y re-yanks it (same contents as the original copy)
 vim.keymap.set('x', 'p', 'pgvy', { desc = 'Paste without yanking replaced text' })
 
+-- Keep the cursor line centered after vertical motions. A count typed before the key
+-- (e.g. 5j) applies to the first command of the rhs, so it still moves 5 lines before zz.
+vim.keymap.set('n', 'j', 'jzz', { desc = 'Down and center' })
+vim.keymap.set('n', 'k', 'kzz', { desc = 'Up and center' })
+vim.keymap.set('n', '<C-d>', '<C-d>zz', { desc = 'Half page down and center' })
+vim.keymap.set('n', '<C-u>', '<C-u>zz', { desc = 'Half page up and center' })
+
 -- Diagnostic Config & Keymaps
 --  See `:help vim.diagnostic.Opts`
 vim.diagnostic.config {

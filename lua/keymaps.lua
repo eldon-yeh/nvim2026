@@ -8,6 +8,10 @@ vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 -- Leave insert mode by typing jk
 vim.keymap.set('i', 'jk', '<Esc>', { desc = 'Exit insert mode' })
 
+-- Paste over a visual selection without overwriting the register with the replaced text:
+-- p pastes, gv reselects the pasted text, y re-yanks it (same contents as the original copy)
+vim.keymap.set('x', 'p', 'pgvy', { desc = 'Paste without yanking replaced text' })
+
 -- Diagnostic Config & Keymaps
 --  See `:help vim.diagnostic.Opts`
 vim.diagnostic.config {

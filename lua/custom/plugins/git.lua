@@ -5,5 +5,6 @@ vim.pack.add {
 }
 
 vim.keymap.set('n', '<leader>lg', '<Cmd>LazyGit<CR>', { desc = '[L]azy[G]it', silent = true })
+vim.keymap.set('n', '<leader>gs', '<Cmd>Telescope git_status<CR>', { desc = '[G]it [S]tatus files' })
 
 -- vim: ts=2 sts=2 sw=2 et

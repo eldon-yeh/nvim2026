@@ -12,6 +12,14 @@ vim.keymap.set('i', 'jk', '<Esc>', { desc = 'Exit insert mode' })
 -- p pastes, gv reselects the pasted text, y re-yanks it (same contents as the original copy)
 vim.keymap.set('x', 'p', 'pgvy', { desc = 'Paste without yanking replaced text' })
 
+-- Changing text goes to the black hole register instead of the (system) clipboard
+vim.keymap.set({ 'n', 'x' }, 'c', '"_c', { desc = 'Change without yanking' })
+vim.keymap.set('n', 'C', '"_C', { desc = 'Change to end of line without yanking' })
+vim.keymap.set({ 'n', 'x' }, 's', '"_s', { desc = 'Substitute without yanking' })
+vim.keymap.set('n', 'S', '"_S', { desc = 'Substitute line without yanking' })
+vim.keymap.set({ 'n', 'x' }, 'x', '"_x', { desc = 'Delete character without yanking' })
+vim.keymap.set('n', 'X', '"_X', { desc = 'Delete character before cursor without yanking' })
+
 -- Keep the cursor line centered after vertical motions. A count typed before the key
 -- (e.g. 5j) applies to the first command of the rhs, so it still moves 5 lines before zz.
 vim.keymap.set('n', 'j', 'jzz', { desc = 'Down and center' })

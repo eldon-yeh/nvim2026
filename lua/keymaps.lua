@@ -26,6 +26,8 @@ vim.keymap.set('n', 'j', 'jzz', { desc = 'Down and center' })
 vim.keymap.set('n', 'k', 'kzz', { desc = 'Up and center' })
 vim.keymap.set('n', '<C-d>', '<C-d>zz', { desc = 'Half page down and center' })
 vim.keymap.set('n', '<C-u>', '<C-u>zz', { desc = 'Half page up and center' })
+vim.keymap.set('n', 'n', 'nzz', { desc = 'Next and center' })
+vim.keymap.set('n', 'N', 'Nzz', { desc = 'Previous and center' })
 
 -- Diagnostic Config & Keymaps
 --  See `:help vim.diagnostic.Opts`

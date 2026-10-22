@@ -22,8 +22,8 @@ vim.keymap.set('n', 'X', '"_X', { desc = 'Delete character before cursor without
 
 -- Keep the cursor line centered after vertical motions. A count typed before the key
 -- (e.g. 5j) applies to the first command of the rhs, so it still moves 5 lines before zz.
-vim.keymap.set('n', 'j', 'jzz', { desc = 'Down and center' })
-vim.keymap.set('n', 'k', 'kzz', { desc = 'Up and center' })
+vim.keymap.set('n', 'j', 'gjzz', { desc = 'Down (screen line) and center' })
+vim.keymap.set('n', 'k', 'gkzz', { desc = 'Up (screen line) and center' })
 vim.keymap.set('n', '<C-d>', '<C-d>zz', { desc = 'Half page down and center' })
 vim.keymap.set('n', '<C-u>', '<C-u>zz', { desc = 'Half page up and center' })
 vim.keymap.set('n', 'n', 'nzz', { desc = 'Next and center' })
@@ -56,6 +56,7 @@ vim.diagnostic.config {
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
 
 vim.keymap.set('n', '<leader>e', '<cmd>Ex<CR>', { desc = 'Open netrw' })
+vim.keymap.set('n', '<leader>tW', '<cmd>set wrap!<CR>', { desc = '[T]oggle [W]ord wrap' })
 
 -- Exit terminal mode in the builtin terminal with a shortcut that is a bit easier
 -- for people to discover. Otherwise, you normally need to press <C-\><C-n>, which
